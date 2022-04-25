@@ -1,5 +1,5 @@
 const fs = require('fs');
-const filePath = process.platform === 'linux' ? '/dev/stdin' : '1/1001.txt';
+const filePath = process.platform === 'linux' ? '/dev/stdin' : '입출력/1001.txt';
 
 let input = fs.readFileSync(filePath).toString().split(' ');
 
