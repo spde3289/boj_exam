@@ -1,0 +1,1 @@
+const fs = require('./1000.txt');

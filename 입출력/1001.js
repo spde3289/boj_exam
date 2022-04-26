@@ -6,5 +6,3 @@ let input = fs.readFileSync(filePath).toString().split(' ');
 var a = +input[0];
 var b = +input[1];
 console.log(a-b);
-
-
