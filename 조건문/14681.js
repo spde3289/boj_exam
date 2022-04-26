@@ -1,18 +1,18 @@
 const readline = require("readline");
 const rl = readline.createInterface({
-  input: process.stdin,
+  input:  process.stdin,
   output: process.stdout
 });
 
-const x = +input[0];
-const y = +input[1];
+let inputNumber
 
-if ( x>0 && y>0 ){
-    console.log(1);
-} else if ( x<0 && y>0){
-    console.log(2);
-} else if ( x>0 && y<0){
-    console.log(3);
-} else{
-    console.log(4);
-}
+rl.on('line', function (line) {
+    inputNumber = line
+    rl.close()
+}).on('close', function () {
+    if(line < 10){
+        console.log('작은수입니다.')
+    }else{
+        console.log('큰수입니다.')
+    }
+})
