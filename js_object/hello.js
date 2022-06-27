@@ -6,16 +6,17 @@ while (i < memberArray.length) {
     i++
 }
 console.groupEnd('object loop')
+
 const memberObject = {
     manager:'egoing',
     developer:'graphittie',
     designer:'leezhce'
 }
+memberObject.ssd = "dd"
 console.group('object loop')
 for(let name in memberObject) {
     console.log(name, memberObject[name])
 }
 console.groupEnd('object loop')
-
 
 
