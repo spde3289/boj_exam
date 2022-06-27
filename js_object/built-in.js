@@ -9,4 +9,4 @@ const MyMath = {
         return Math.floor(val);
     }
 }
-console.log(MyMath.floor(3.5,6.6))
+console.log(MyMath.random())
