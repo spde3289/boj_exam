@@ -1,8 +1,8 @@
 function Person(name, first, second, third) {
-    this.name=name;
-    this.first=first;
-    this.secound=second;
-    this.third=third;
+    this.name = name;
+    this.first = first;
+    this.secound = second;
+    this.third = third;
 };
 
 const kim = new Person('kim', 10 ,20, 30)
