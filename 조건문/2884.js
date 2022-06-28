@@ -8,7 +8,8 @@ let input = [];
 
 
 rl.on("line", function (line) {
-  input = line.split(' ').map( function(el){return parseInt(el)});
+  input = line.split(' ').map( el => parseInt(el));
+  // input.
 }).on("close", function () {
   ///////////////////////////////
     let num1 = input[0];
