@@ -3,32 +3,25 @@ const rl  = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-let arr = [];
+let input = [];
 rl.on('line', line=> {
-    arr = line.split(' ').map( el => parseInt(el));
+    input = line.split(' ').map( el => parseInt(el));
 }).on('close', ()=> {
-let price
-for (let i = 0; i < arr.length; i++) {
-    const dice1 = arr[i];
-    for (let j = i + 1; j < arr.length; j++) {
-        const dice2 = arr[j];
-        for (let k = i + 2; k < arr.length; k) {
-            const dice3 = arr[k];
-            if (dice3 === dice1 && dice1 === dice2) {
-                price = 1000 + (arr[i] * 1000);
-                console.log(price)
-                break;
-            } else if (dice3 === dice2 || dice3 === dice1 || dice2 === dice1 ){
-                price = 1000 + (arr[i] * 100)
-                console.log(price)
-                break;
-            } else {
-                price = Math.max(...arr)*100
-                console.log(price)
-                break;
-            }
-        }
-        break;
-    }
-    break
-}})
+    let dice1 = input[0]
+    let dice2 = input[1]
+    let dice3 = input[2]
+
+    if (dice1 === dice2 && dice1 === dice3) {
+        console.log(10000 + (dice1*1000))
+    }else if (dice1 !== dice2 && dice2 !== dice3 && dice1 !== dice3) {
+        console.log((Math.max(...input))*100);
+    }else{
+        if (dice1 === dice2){
+            console.log(1000 + (dice1*100));
+        }else if (dice2 === dice3){
+            console.log(1000 + (dice2*100));
+        }else if (dice1 === dice3){
+            console.log(1000 + (dice3*100));
+        }};
+
+})
