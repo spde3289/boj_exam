@@ -9,7 +9,7 @@ let input = [];
 
 rl.on("line", function (line) {
   input = line.split(' ').map( el => parseInt(el));
-  // input.
+  //input.push(parseInt(line))
 }).on("close", function () {
   ///////////////////////////////
     let num1 = input[0];
