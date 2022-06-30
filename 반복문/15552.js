@@ -1,16 +1,18 @@
 const readline = require('readline');
 const rl = readline.createInterface({
     input : process.stdin,
-    output : process.stdout
+    output : process.stdout,
 });
-let input = [];
+const input = [];
+let answer = '';
 rl.on('line',line =>{
     input.push(line);
 }).on('close', () =>{
-    for(let i = 1; i < input[0]; i++){
-        let answer
-        answer += input[i].split(' ')[0] + input[i].split(' ')[1] + "\n"
-    }
+    const T = Number(input[0])
+    for(let i=1; i <= T; i++){
+        let [a, b] = input[i].split(' ');
+        answer += Number(a) +Number(b) + "\n" ;
+    };
     console.log(answer);
     process.exit();
-} ) 
+});

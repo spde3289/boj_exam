@@ -13,4 +13,4 @@ rl.on('line',line =>{
     }
     console.log(N)
     process.exit()
-})
+});
