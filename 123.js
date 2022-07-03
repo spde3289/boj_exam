@@ -11,5 +11,5 @@ let answer = '';
 
 
 
-console.log(answer);
+console.log();
 console.log(typeof(input[0]));
