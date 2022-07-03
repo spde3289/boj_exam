@@ -6,10 +6,10 @@ function sum(n){
 };
 
 //sum.call(kim);
-console.log(sum.call(kim, 3)); //apply
 console.log(sum.call(lee," => "));
 
 let kimSum = sum.bind(kim, ' => ');
+console.log(sum.call(kim, 3)); //apply
 console.log(kimSum()); 
 //console.log(sum.bind(lee," => "));
 
