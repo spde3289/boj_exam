@@ -5,15 +5,19 @@ const rl = readline.createInterface({
 });
 const input = [];
 let answer = '';
+let star = '';
 rl.on('line', line =>{
     input.push(line);
 }).on('close', () => {
-    const N = input
-    for(let i = 1; i <= N; i++) {
-        for(let j = 0; j < i; j++){
-            answer += "*";
+    for(let i = 1; i <= input; i++){
+        for(let j = 1; j <= input-i; j++){
+            answer += ' ';
         };
-        answer += '\n'
+        for(let k = 1; k <= i; k++){
+            star += '*';
+        };
+        answer += star+"\n";
+        star = '';
     };
     console.log(answer);
     process.exit();

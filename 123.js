@@ -1,15 +1,15 @@
-let input = [5,"1 1","2 2","3 3","9 8","5 10"] ;
-let answer = '';
+let input = [5] ;
+let answer = '';   
+let star = '';
+for(let i = 1; i <= input; i++){
+    for(let j = 1; j <= input-i; j++){
+        answer += ' ';
+    };
+    for(let k = 1; k <= i; k++){
+        star += '*';
+    };
+    answer += star+"\n";
+    star = '';
+};
 
-
-    for(let i = 1; i <= input[0]; i++){
-        let a = input[i].split(' ')[0];
-        let b = input[i].split(' ')[1];
-        answer += `Case #${i}: ` + (Number(a)+Number(b)) + "\n";
-    }
-
-
-
-
-console.log();
-console.log(typeof(input[0]));
+console.log(answer);
