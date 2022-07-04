@@ -11,7 +11,7 @@ rl.on('line', line =>{
     const N = input
     for(let i = 1; i <= N; i++) {
         for(let j = 0; j < i; j++){
-            answer += "*";
+            answer += '*';
         };
         answer += '\n'
     };
