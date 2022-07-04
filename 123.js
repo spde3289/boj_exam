@@ -1,15 +1,14 @@
-let input = [5] ;
+let input = ["10 5","1 10 4 9 2 3 8 5 7 6"] ;
 let answer = '';   
-let star = '';
-for(let i = 1; i <= input; i++){
-    for(let j = 1; j <= input-i; j++){
-        answer += ' ';
-    };
-    for(let k = 1; k <= i; k++){
-        star += '*';
-    };
-    answer += star+"\n";
-    star = '';
-};
 
+const N = Number(input[0].split(' ')[0]);
+const X = Number(input[0].split(' ')[1]);
+for(let i = 0; i <= N; i++){
+    let A = Number(input[1].split(' ')[i]);
+    if(A < X) {
+        answer += A + " "; 
+    };
+};
 console.log(answer);
+
+
