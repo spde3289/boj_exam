@@ -3,12 +3,8 @@ let answer = '';
 
 const N = Number(input[0].split(' ')[0]);
 const X = Number(input[0].split(' ')[1]);
-for(let i = 0; i <= N; i++){
-    let A = Number(input[1].split(' ')[i]);
-    if(A < X) {
-        answer += A + " "; 
-    };
-};
+    let A = input[1].split(' ')
+    answer =  A.filter(A => A < X)
 console.log(answer);
 
 
