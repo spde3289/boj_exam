@@ -1,10 +1,11 @@
-let input = ["10 5","1 10 4 9 2 3 8 5 7 6"] ;
+let input = ["1 1","2 3",'3 4','9 8','5 2','0 0'];
 let answer = '';   
-
-const N = Number(input[0].split(' ')[0]);
-const X = Number(input[0].split(' ')[1]);
-    let A = input[1].split(' ')
-    answer =  A.filter(A => A < X)
+for(let i = 0; i <= answer.length; i++){
+    let A = Number(input[i].split(' ')[0]);
+    let B = Number(input[i].split(' ')[1]);
+    if(A+B === 0){
+        break;
+    };
+    answer += A+B + '\n';
+}
 console.log(answer);
-
-
