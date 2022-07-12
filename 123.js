@@ -1,12 +1,20 @@
-let input = ['6','20', '10', '55', '30', '7'];
-//answer = a.map(Math.max(a)) + ' ' + a.map(Math.max(a))
-const a = Math.max(...input);
-    let i = 0;
-    while(true){
-        const b = input[i];
-        i++;
-        if(+a === +b){
-            break;
-        };
-    };
-console.log(a,i);
+let line = ['150','266', '427'];
+let input = line.map(el => Number(el))
+let answer = '';
+
+const A = input[0];
+const B = input[1];
+const C = input[2];
+
+const product = A*B*C;
+
+let abc = product.toString().split('').map(el => Number(el));
+
+for(let i = 0; i < 10; i++){
+    let num = abc.filter(num => num === i);
+    answer += num.length + '\n';
+};
+
+console.log(abc)
+
+console.log(answer)
