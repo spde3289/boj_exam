@@ -1,10 +1,6 @@
-let line = ['42','84', '252', '420', '42', '42', '42', '42', '42', '14'];
-let input = line.map(el => Number(el))
-let answer = [];
-console.log(input);
-for (let i = 0; i < 10; i++) {
-    let num = input[i] % 42;
-    answer.push(num);
-}
-console.log(answer);
-console.log(new Set(answer).size)
+const line = ['4','1 100 100 100'];
+const input = line.map( el => el.split(' '));
+const M = Math.max(...input[1]);
+for(let i = 0; i < input[0]; i++){
+    input[1].splice(i,1,(input[1][i]/M*100));
+};
