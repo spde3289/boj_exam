@@ -7,14 +7,13 @@ const input = [];
 rl.on('line', line => {
     input.push(line);
 }).on('close', () => {
-    input[1].split(' ').map(el => Number(el));
-    const M = Math.max(...input[1]);
+    let Input = input[1].split(' ').map(el => Number(el));
+    let M = Math.max(...Input);
 
-    for(let i = 0; i < Number(input[0]); i++){
-        input[1].splice(i,1,(input[1][i]/M*100));
+    for(let i = 0; i < input[0]; i++){
+        Input.splice(i,1,(Input[i]/M*100));
     }; 
-
-    let average = input[1].reduce((a,b) => a+b);
-    console.log(average/Number(input[0]));
+    let average = Input.reduce((a,b) => a+b);
+    console.log(average/input[0]);
     process.exit();
 });
