@@ -8,7 +8,6 @@ const input = [
 ];
 
 const C = input[0];
-console.log(C)
 for (let i = 1; i <= C; i++) {
     const Score = input[i].split(' ').map(el => Number(el));
     const N = input[i][0];
@@ -18,8 +17,9 @@ for (let i = 1; i <= C; i++) {
         sum += Score[j];
     };
     average = sum / N;
-    
-    console.log(average, '%');
+    let aaa = Score.filter(el => el > average);
+     
+    console.log((aaa.length/N*100).toFixed(3)+  '%' );
 }; 
 /* let N = 5
 for (let i = 1; i <= N; i++){
@@ -27,5 +27,3 @@ for (let i = 1; i <= N; i++){
 
     console.log(i);
 }; */
-let aaa = (50+50+70+80+100 )/5
-console.log(aaa)
