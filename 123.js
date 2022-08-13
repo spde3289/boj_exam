@@ -18,7 +18,6 @@ for (let i = 1; i <= C; i++) {
     };
     average = sum / N;
     let aaa = Score.filter(el => el > average);
-     
     console.log((aaa.length/N*100).toFixed(3)+  '%' );
 }; 
 /* let N = 5
