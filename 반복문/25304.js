@@ -9,8 +9,8 @@ rl.on('line', line => {
 }).on('close', () => {
     const total = Number(input[0]);
     const count = Number(input[1]);
-    const sum = 0;
-    for(let i = 0; i <= count; i++) {
+    let sum = 0;
+    for(let i = 0; i < count; i++) {
         sum += Number(input[i+2].split(' ')[0]) * 
         Number(input[i+2].split(' ')[1]);
     };
