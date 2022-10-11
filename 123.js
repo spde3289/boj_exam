@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* 
 let arr = Array(10001).fill(false);
 let n = 1;
@@ -40,4 +41,10 @@ for (let i = 0; i < range; i++) {
     if (selfNumbers[i]) {
         console.log(i);
     }
+=======
+const input = 2;
+
+for(let i = 1; i <= 9; i++){
+    console.log(input,' * ',i,' = ',input*i);
+>>>>>>> Stashed changes
 }
