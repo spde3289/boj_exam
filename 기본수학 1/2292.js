@@ -7,8 +7,14 @@ const input = [];
 rl.on('line', line => {
     input.push(line);
 }).on('close', () => {
-    const number = input[0];
+    const n = input[0];
     
+    let [sum,i] = [1,1];
+        while (sum < n){
+        sum += i*6;
+        i++;
+    }; 
+    console.log(i);
 
     process.exit(0);
 })
