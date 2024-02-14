@@ -6,14 +6,14 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
-
 let input;
 rl.on("line", (line) => {
-  input = line;
+  input = line
 }).on("close", () => {
-  let arr = [/c=/g, /c-/g, /dz=/g, /lj/g, /nj/g, /s=/g, /z=/g];
+  let arr = [/dz=/g, /c=/g, /c-/g, /d-/g, /lj/g, /nj/g, /s=/g, /z=/g];
   arr.map((el) => {
-    input = input.replace(el, "0");
+    input = input.replace(el, ",");
   });
   console.log(input.length);
+  process.exit();
 });
