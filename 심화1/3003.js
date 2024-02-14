@@ -4,14 +4,16 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
-const input = [];
+
+let input;
+let answer = "";
 rl.on("line", (line) => {
-  input.push(Number(line.toString()));
+  input = line.split(" ").map((el) => Number(el));
 }).on("close", () => {
-  let arr = [];
-  for (let i = 1; i <= 30; i++) {
-    if (!input.includes(i)) arr.push(i);
+  const arr = [1, 1, 2, 2, 2, 8];
+  for (let i = 0; i < arr.length; i++) {
+    input[i];
+    answer += arr[i] - input[i] + " ";
   }
-  console.log(arr.join("\n"));
-  process.exit();
+  console.log(answer);
 });
