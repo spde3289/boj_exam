@@ -1,10 +1,10 @@
-const fs = require("fs");
+// 그룹 단어 체커
+// https://www.acmicpc.net/problem/1316
 const readline = require("readline");
 
 const rl = readline.createInterface({
-  input: fs.createReadStream("./ex.txt"),
+  input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
 
 let input = [];
