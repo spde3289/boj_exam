@@ -1,12 +1,11 @@
-const fs = require("fs");
+// 단어공부
+//https://www.acmicpc.net/problem/1157
 const readline = require("readline");
 
 const rl = readline.createInterface({
-  input: fs.createReadStream("./ex.txt"),
+  input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
-
 let input;
 
 rl.on("line", (line) => {
