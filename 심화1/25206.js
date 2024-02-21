@@ -1,13 +1,11 @@
-const fs = require("fs");
+// 너의 평점은
+// https://www.acmicpc.net/problem/25206
 const readline = require("readline");
-const util = require("node:util");
 
 const rl = readline.createInterface({
-  input: fs.createReadStream("./ex.txt"),
+  input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
-
 
 let input = [];
 let aa = 0
