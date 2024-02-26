@@ -1,18 +1,17 @@
-const fs = require("fs");
+// 별 찍기 -7
+// https://www.acmicpc.net/problem/2444
 const readline = require("readline");
 
 const rl = readline.createInterface({
-  input: fs.createReadStream("./ex.txt"),
+  input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
 
-let input ;
+let input;
 
 rl.on("line", (line) => {
   input = +line;
 }).on("close", () => {
-
   /* 2. 1부터 N-1까지 공백과 별 찍기 */
   for (let i = 1; i < input; i++) {
     let blank = " ".repeat(input - i);
@@ -27,3 +26,4 @@ rl.on("line", (line) => {
     console.log(blank + stars);
   }
 });
+
