@@ -10,20 +10,12 @@ const rl = readline.createInterface({
 let input ;
 
 rl.on("line", (line) => {
-  input = +line;
+  input = +line / 4;
 }).on("close", () => {
-
-  /* 2. 1부터 N-1까지 공백과 별 찍기 */
-  for (let i = 1; i < input; i++) {
-    let blank = " ".repeat(input - i);
-    let stars = "*".repeat(i + (i - 1));
-    console.log(blank + stars);
+  let answer = ""
+  for (let i = 0; i < input; i++){
+    answer += "long "
   }
-
-  /* 3. N부터 1까지 공백과 별 찍기 */
-  for (let j = input; j > 0; j--) {
-    let blank = " ".repeat(input - j);
-    let stars = "*".repeat(j + (j - 1));
-    console.log(blank + stars);
-  }
+  answer += "int "
+  console.log(answer);
 });
