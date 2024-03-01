@@ -1,10 +1,10 @@
-const fs = require("fs");
+// 중앙 이동 알고리즘
+// https://www.acmicpc.net/problem/2903
 const readline = require("readline");
 
 const rl = readline.createInterface({
-  input: fs.createReadStream("./ex.txt"),
+  input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
 
 let input;
