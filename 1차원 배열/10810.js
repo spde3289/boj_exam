@@ -1,13 +1,14 @@
-const fs = require("fs");
+// 공넣기
+// https://www.acmicpc.net/problem/10810
+
 const readline = require("readline");
 
 const rl = readline.createInterface({
-  input: fs.createReadStream("./ex.txt"),
+  input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
 
-let input= [];
+let input = [];
 
 rl.on("line", (line) => {
   input.push(line);
