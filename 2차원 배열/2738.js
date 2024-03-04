@@ -1,10 +1,10 @@
-const fs = require("fs");
+// 행렬 덧셈
+// https://www.acmicpc.net/problem/2738
 const readline = require("readline");
 
 const rl = readline.createInterface({
-  input: fs.createReadStream("./ex.txt"),
+  input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
 
 let input = [];
