@@ -1,10 +1,10 @@
-const fs = require("fs");
+// 공 바꾸기
+// https://www.acmicpc.net/problem/10813
 const readline = require("readline");
 
 const rl = readline.createInterface({
-  input: fs.createReadStream("./ex.txt"),
+  input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
 
 let input = [];
