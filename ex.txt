@@ -3,3 +3,46 @@
 3 4
 1 4
 2 2
+
+function reverseBaskets(N, M, instructions) {
+    // 바구니 배열 생성
+    let baskets = [];
+    for (let i = 1; i <= N; i++) {
+        baskets.push(i);
+    }
+
+    // M번 바구니 순서 역순으로 만들기
+    for (let i = 0; i < M; i++) {
+        let [start, end] = instructions[i];
+        // 범위 내 바구니 순서 역순으로 변경
+        while (start < end) {
+            let temp = baskets[start - 1];
+            baskets[start - 1] = baskets[end - 1];
+            baskets[end - 1] = temp;
+            start++;
+            end--;
+        }
+    }
+
+    return baskets;
+}
+
+// 예제 입력
+const input = `5 4
+1 2
+3 4
+1 4
+2 2`;
+
+const lines = input.trim().split('\n');
+const [N, M] = lines[0].split(' ').map(Number);
+
+// 역순으로 바구니 순서를 만드는 방법 저장
+const instructions = [];
+for (let i = 1; i <= M; i++) {
+    instructions.push(lines[i].split(' ').map(Number));
+}
+
+// 함수 호출
+const result = reverseBaskets(N, M, instructions);
+console.log(result.join(' ')); // 결과 출력

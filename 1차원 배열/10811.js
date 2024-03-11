@@ -1,10 +1,10 @@
-const fs = require("fs");
+// 바구니 뒤집기
+// https://www.acmicpc.net/problem/10811
 const readline = require("readline");
 
 const rl = readline.createInterface({
-  input: fs.createReadStream("./ex.txt"),
+  input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
 
 let input = [];
