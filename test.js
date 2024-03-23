@@ -7,22 +7,26 @@ const rl = readline.createInterface({
   terminal: false,
 });
 
-let input;
+let input= [];
 
 rl.on("line", (line) => {
-  input = line.split(" ").map(el => +el);
+  input.push(+line)
 }).on("close", () => {
-  console.log(input[0], input[1], input[2]);
-  let count = 0;
-  let i = 0;
-  
-  while (true) {
-    i += input[0];
-    count += 1;
+  const coin = [25, 10, 5, 1]
+  let answer = ""
 
-    if (i < input[2]) {
-      i -= input[1];
-    } else if (i >= input[2]) break;
+  for (let i = 1; i <= input[0]; i++) {
+    input[i] / coin[0]
+    const qua = Math.floor(input[i] / coin[0]);
+    let a = input[i] % coin[0]
+    const dim = Math.floor(a / coin[1])
+    let b = a % coin[1]
+    const nic = Math.floor(b / coin[2])
+    let c = b % coin[2]
+    const pen = Math.floor(c / coin[3])
+
+    answer += `${qua} ${dim} ${nic} ${pen} \n`
   }
-  console.log(count);
+
+  console.log(answer)
 });
