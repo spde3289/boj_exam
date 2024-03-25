@@ -1,10 +1,10 @@
-const fs = require("fs");
+// 배수와 약수
+// https://www.acmicpc.net/problem/5086
 const readline = require("readline");
 
 const rl = readline.createInterface({
-  input: fs.createReadStream("./ex.txt"),
+  input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
 
 let input = [];
