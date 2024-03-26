@@ -1,10 +1,10 @@
-const fs = require("fs");
+// 약수 구하기
+// https://www.acmicpc.net/problem/2501
 const readline = require("readline");
 
 const rl = readline.createInterface({
-  input: fs.createReadStream("./ex.txt"),
+  input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
 
 let input;
@@ -21,7 +21,7 @@ rl.on("line", (line) => {
   }
 
   if (k > a.length) {
-    console.log(0)
+    console.log(0);
   } else {
     console.log(a[k - 1]);
   }
