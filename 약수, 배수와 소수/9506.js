@@ -1,10 +1,10 @@
-const fs = require("fs");
+// 약수들의 합
+// https://www.acmicpc.net/problem/9506
 const readline = require("readline");
 
 const rl = readline.createInterface({
-  input: fs.createReadStream("./ex.txt"),
+  input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
 
 let input = [];
@@ -12,7 +12,7 @@ let input = [];
 rl.on("line", (line) => {
   input.push(+line);
 }).on("close", () => {
-  let answer = ``
+  let answer = ``;
   for (let i = 0; i < input.length - 1; i++) {
     const n = [];
     for (let j = 1; j < input[i]; j++) {
