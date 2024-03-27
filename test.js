@@ -10,25 +10,25 @@ const rl = readline.createInterface({
 let input = [];
 
 rl.on("line", (line) => {
-  input.push(+line);
+  input.push(line.split(" ").map(el => +el));
 }).on("close", () => {
-  let answer = ``
-  for (let i = 0; i < input.length - 1; i++) {
-    const n = [];
-    for (let j = 1; j < input[i]; j++) {
-      if (input[i] % j === 0) {
-        n.push(j);
+  const N = input[0]
+  const C = input[1]
+
+  let answer = 0
+  
+  for (let i = 0; i < N; i++){
+    let aa = []
+    let s = C[i]
+    for (let j = 1; j <= s; j++){
+      
+      if (s % j === 0) {
+        aa.push(j)
       }
     }
-    const s = n.reduce((pre, cur) => {
-      return pre + cur;
-    });
-
-    if (s != input[i]) {
-      answer += `${input[i]} is NOT perfect. \n`;
-    } else {
-      answer += `${input[i]} = ${n.toString().replaceAll(",", " + ")} \n`;
+    if (aa.length === 2) {
+      answer += 1
     }
   }
-  console.log(answer);
+  console.log(answer)
 });
