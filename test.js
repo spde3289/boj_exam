@@ -10,7 +10,7 @@ const rl = readline.createInterface({
 let input = [];
 
 rl.on("line", (line) => {
-  input.push(+line);
+  input.push(line.split(" ").map(el => +el));
 }).on("close", () => {
   let m = input[0];
   let n = input[1];
