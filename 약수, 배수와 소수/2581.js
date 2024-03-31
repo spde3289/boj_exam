@@ -1,10 +1,10 @@
-const fs = require("fs");
+// 소수
+// https://www.acmicpc.net/problem/2581
 const readline = require("readline");
 
 const rl = readline.createInterface({
-  input: fs.createReadStream("./ex.txt"),
+  input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
 
 let input = [];
@@ -40,3 +40,4 @@ rl.on("line", (line) => {
     console.log(`${sum}\n${arr[0]}`);
   }
 });
+
