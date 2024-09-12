@@ -1,7 +1,7 @@
-let input = "ZZZZZ 36";
-
-const [N, B] = input.split(" ");
-
-let ans = parseInt(N, B);
-
-console.log(N, B);
+let input = "   ".trim();
+if (input === "") {
+  console.log(0);
+} else {
+  const answer = input.trim().split(" ").length;
+  console.log(answer);
+}
