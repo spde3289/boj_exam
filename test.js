@@ -1,7 +1,9 @@
-let input = "   ".trim();
-if (input === "") {
-  console.log(0);
-} else {
-  const answer = input.trim().split(" ").length;
-  console.log(answer);
-}
+let input = "839 237";
+
+const [a, b] = input.split(" ");
+
+const reverseNum = (num) => {
+  return Number(num.split("").reverse().join(""));
+};
+
+console.log(reverseNum(a) > reverseNum(b) ? reverseNum(a) : reverseNum(b));
