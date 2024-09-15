@@ -1,3 +1,5 @@
+// 최댓값
+// https://www.acmicpc.net/problem/2566
 const readline = require("readline");
 
 const rl = readline.createInterface({
